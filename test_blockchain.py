@@ -13,6 +13,7 @@ class TestBlockchain(unittest.TestCase):
         last_block = blockchain.last_block
         assert(last_block['index'] == 1)
         assert(last_block['proof'] == 100)
+        assert(len(last_block['transactions']) == 0)
         assert(last_block['previous_hash'] == 1)
 
     # def test_adding_transaction_to_blockchain(self):
